@@ -1,27 +1,38 @@
 {
-  "name": "docs",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --port 3001",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "13.0.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "ui": "workspace:*"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "eslint-config-custom": "workspace:*",
-    "eslint": "7.32.0",
-    "tsconfig": "workspace:*",
-    "@types/node": "^17.0.12",
-    "@types/react": "^18.0.22",
-    "@types/react-dom": "^18.0.7",
-    "typescript": "^4.5.3"
-  }
+    "name": "docs",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "start-storybook -p 6006",
+        "lint": "TIMING=1 eslint . --ext js,jsx,ts,tsx,md,mdx --fix",
+        "build": "build-storybook --docs",
+        "preview-storybook": "serve storybook-static",
+        "clean": "rm -rf .turbo && rm -rf node_modules"
+    },
+    "dependencies": {
+        "@my/design-system": "*",
+        "react": "17.x",
+        "react-dom": "17.x"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.19.6",
+        "@internal/tsconfig": "*",
+        "@mdx-js/react": "^1.6.22",
+        "@storybook/addon-actions": "^6.5.13",
+        "@storybook/addon-docs": "^6.5.13",
+        "@storybook/addon-essentials": "^6.5.13",
+        "@storybook/addon-links": "^6.5.13",
+        "@storybook/builder-vite": "^0.2.5",
+        "@storybook/client-api": "^6.5.13",
+        "@storybook/client-logger": "^6.5.13",
+        "@storybook/react": "^6.5.13",
+        "@vitejs/plugin-react": "^2.2.0",
+        "eslint-config-internal": "*",
+        "eslint-plugin-mdx": "*",
+        "require-from-string": "^2.0.2",
+        "serve": "^14.0.1",
+        "typescript": "*",
+        "vite": "^3.2.2",
+        "webpack": "^5.74.0"
+    }
 }

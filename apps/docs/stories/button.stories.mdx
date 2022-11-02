@@ -1,0 +1,38 @@
+import { Button } from '@my/design-system/src';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+<Meta title="Components/Button" component={Button} />
+
+export const ButtonStory = (args) => {
+    return <Button variant={args?.variant}>{args?.children}</Button>;
+};
+
+# Button
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur tempor, nisl nunc egestas nisi, euismod aliquam nisl nunc euismod.
+
+## Props
+
+<ArgsTable of={Button} />
+
+## Examples
+
+<Story
+    name="Text"
+    args={{
+        variant: 'text',
+        children: 'Test Button',
+    }}
+>
+    {ButtonStory.bind({})}
+</Story>
+
+<Story
+    name="Contained"
+    args={{
+        variant: 'contained',
+        children: 'Test Button',
+    }}
+>
+    {ButtonStory.bind({})}
+</Story>

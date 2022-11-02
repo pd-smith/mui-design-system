@@ -1,0 +1,37 @@
+{
+    "name": "@my/design-system",
+    "version": "0.0.0",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "sideEffects": false,
+    "license": "MIT",
+    "files": [
+        "dist/**"
+    ],
+    "scripts": {
+        "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+        "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
+        "lint": "TIMING=1 eslint --ext js,jsx,ts,tsx,md,mdx --fix",
+        "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    },
+    "devDependencies": {
+        "@internal/prettier-config": "*",
+        "@internal/tsconfig": "*",
+        "@types/react": "*",
+        "@types/react-dom": "*",
+        "eslint": "*",
+        "eslint-config-internal": "*",
+        "react": "*",
+        "tsup": "*",
+        "typescript": "*"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.10.5",
+        "@emotion/styled": "^11.10.5",
+        "@mui/material": "^5.10.12"
+    }
+}

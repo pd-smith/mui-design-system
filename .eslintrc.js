@@ -1,10 +1,8 @@
 module.exports = {
-  root: true,
-  // This tells ESLint to load the config from the package `eslint-config-custom`
-  extends: ["custom"],
-  settings: {
-    next: {
-      rootDir: ["apps/*/"],
+    root: true,
+    extends: ['internal', 'plugin:mdx/recommended'],
+    settings: {
+        'mdx/code-blocks': true,
+        'mdx/language-mapper': {},
     },
-  },
 };
