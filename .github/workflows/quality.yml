@@ -1,0 +1,61 @@
+name: Quality
+
+on:
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    build:
+        name: Build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout branch
+              uses: actions/checkout@v3
+
+            - name: Setup Node.js 16.x
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 16.x
+
+            - name: Install Dependencies
+              run: npm install
+
+            - name: Build packages
+              run: npm run build
+
+    tests:
+        name: Tests
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout branch
+              uses: actions/checkout@v3
+
+            - name: Setup Node.js 16.x
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 16.x
+
+            - name: Install Dependencies
+              run: npm install
+
+            - name: Run tests
+              run: npm run test
+
+    eslint:
+        name: ESLint
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout branch
+              uses: actions/checkout@v3
+
+            - name: Setup Node.js 16.x
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 16.x
+
+            - name: Install Dependencies
+              run: npm install
+
+            - name: Run ESLint
+              run: npm run lint
