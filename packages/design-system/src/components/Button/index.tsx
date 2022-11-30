@@ -1,3 +1,4 @@
+/* TOUCH THIS FILE AS A LAST RESORT! 99.9% of all changes should be done to the theme!*/
 import React from 'react';
 import MuiButton, { type ButtonProps as MuiButtonProps } from '@mui/material/Button';
 

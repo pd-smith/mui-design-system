@@ -8,9 +8,9 @@ module.exports = {
     core: {
         builder: '@storybook/builder-vite',
     },
-    typescript: {
-        reactDocgen: false,
-    },
+    // typescript: {
+    //     reactDocgen: true,
+    // },
     async viteFinal(config, { configType }) {
         return mergeConfig(config, {
             resolve: {
