@@ -1,2 +1,2 @@
-export * from './Button';
-export * from './ThemeProvider';
+// Consider just having this be a peer dependency instead
+export { ThemeProvider } from './ThemeProvider';
