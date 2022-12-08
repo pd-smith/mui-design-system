@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack, Divider, Typography, TextField } from '@mui/material';
+import { Stack, Divider, Typography, TextField } from '@my/design-system';
 
 export default {
     title: 'PlayTest/MockScreens',
